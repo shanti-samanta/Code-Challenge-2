@@ -21,6 +21,8 @@ class MainViewModel constructor(private val repository: MainRepository)  : ViewM
     val itemList = MutableLiveData<List<Product>>()
     val errorMessage = MutableLiveData<String>()
 
+    val cartTotal = MutableLiveData<Double>()
+
     fun getAllProducts() {
 
         val response = repository.getAllProducts()

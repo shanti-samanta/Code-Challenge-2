@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -38,9 +35,10 @@ class ProductFragment : Fragment() {
         // Display on Fragment
         Glide.with(view).load(args.productItem.image).into(view.findViewById<ImageView>(R.id.imgProductImage))
         view.findViewById<TextView>(R.id.txvProductTitle).text = args.productItem.title
-        view.findViewById<TextView>(R.id.txvProductRating).text = args.productItem.rating.rate.toString()
+        view.findViewById<TextView>(R.id.txvProductRating).text = "(" + args.productItem.rating.rate.toString() +")"
         view.findViewById<TextView>(R.id.txvProductPrice).text = "USD " + args.productItem.price.toString()
         view.findViewById<TextView>(R.id.txvProductDescription).text = args.productItem.description
+        view.findViewById<RatingBar>(R.id.ratingBar).rating = args.productItem.rating.rate.toFloat()
 
         //Handling Add to Cart button
         view.findViewById<Button>(R.id.btnAddToCart).setOnClickListener{
@@ -52,3 +50,4 @@ class ProductFragment : Fragment() {
         return view
     }
 }
+

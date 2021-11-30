@@ -43,6 +43,7 @@ class CartFragment : Fragment() {
             adapter.itemList = it
             adapter.notifyDataSetChanged()
         })
+
         return binding.root
     }
 }

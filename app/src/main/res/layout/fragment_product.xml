@@ -37,60 +37,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgProductImage" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgStar1"
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
-            android:tint="#FFC107"
+            android:layout_marginTop="18dp"
+            android:numStars="5"
+            android:progressTint="#FFC107"
+            android:stepSize="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txvProductTitle"
-            app:srcCompat="@drawable/ic_star" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgStar2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
-            android:tint="#FFC107"
-            app:layout_constraintStart_toEndOf="@+id/imgStar1"
-            app:layout_constraintTop_toBottomOf="@+id/txvProductTitle"
-            app:srcCompat="@drawable/ic_star" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgStar3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
-            android:tint="#FFC107"
-            app:layout_constraintStart_toEndOf="@+id/imgStar2"
-            app:layout_constraintTop_toBottomOf="@+id/txvProductTitle"
-            app:srcCompat="@drawable/ic_star" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgStar4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
-            android:tint="#FFC107"
-            app:layout_constraintStart_toEndOf="@+id/imgStar3"
-            app:layout_constraintTop_toBottomOf="@+id/txvProductTitle"
-            app:srcCompat="@drawable/ic_star" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgStar5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
-            android:tint="#FFC107"
-            app:layout_constraintStart_toEndOf="@+id/imgStar4"
-            app:layout_constraintTop_toBottomOf="@+id/txvProductTitle"
-            app:srcCompat="@drawable/ic_star" />
+            app:layout_constraintTop_toBottomOf="@+id/txvProductTitle" />
 
         <TextView
             android:id="@+id/txvProductRating"
@@ -100,7 +58,7 @@
             android:layout_marginTop="16dp"
             android:text="(2.2)"
             android:textSize="20dp"
-            app:layout_constraintStart_toEndOf="@+id/imgStar5"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar"
             app:layout_constraintTop_toBottomOf="@+id/txvProductTitle" />
 
         <TextView
@@ -151,6 +109,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/btnLike"
             app:layout_constraintTop_toBottomOf="@+id/txvProductDescription" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
